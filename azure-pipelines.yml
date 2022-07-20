@@ -37,10 +37,3 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Dev-Ops'
-    appType: 'webAppLinux'
-    WebAppName: 'devopsa'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
